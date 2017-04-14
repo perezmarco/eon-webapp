@@ -1,0 +1,52 @@
+/usr/local/lib/python2.7/dist-packages/flask_sqlalchemy/__init__.py:839: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+Traceback (most recent call last):
+  File "/usr/local/bin/flask", line 11, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python2.7/dist-packages/flask/cli.py", line 513, in main
+    cli.main(args=args, prog_name=name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/cli.py", line 380, in main
+    return AppGroup.main(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python2.7/dist-packages/click/core.py", line 1066, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/usr/local/lib/python2.7/dist-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/usr/local/lib/python2.7/dist-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/click/decorators.py", line 64, in new_func
+    return ctx.invoke(f, obj, *args[1:], **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/flask/cli.py", line 423, in run_command
+    app = DispatchingApp(info.load_app, use_eager_loading=eager_loading)
+  File "/usr/local/lib/python2.7/dist-packages/flask/cli.py", line 152, in __init__
+    self._load_unlocked()
+  File "/usr/local/lib/python2.7/dist-packages/flask/cli.py", line 176, in _load_unlocked
+    self._app = rv = self.loader()
+  File "/usr/local/lib/python2.7/dist-packages/flask/cli.py", line 237, in load_app
+    rv = locate_app(self.app_import_path)
+  File "/usr/local/lib/python2.7/dist-packages/flask/cli.py", line 90, in locate_app
+    __import__(module)
+  File "/home/vagrant/eon-webapp/flaskapp/run.py", line 6, in <module>
+    app = create_app(config_name)
+  File "/home/vagrant/eon-webapp/flaskapp/app/__init__.py", line 38, in create_app
+    app.register_blueprint(auth_blueprint)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 64, in wrapper_func
+    return f(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 951, in register_blueprint
+    blueprint.register(self, options, first_registration)
+  File "/usr/local/lib/python2.7/dist-packages/flask/blueprints.py", line 154, in register
+    deferred(state)
+  File "/usr/local/lib/python2.7/dist-packages/flask/blueprints.py", line 173, in <lambda>
+    s.add_url_rule(rule, endpoint, view_func, **options))
+  File "/usr/local/lib/python2.7/dist-packages/flask/blueprints.py", line 76, in add_url_rule
+    view_func, defaults=defaults, **options)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 64, in wrapper_func
+    return f(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1043, in add_url_rule
+    rule = self.url_rule_class(rule, methods=methods, **options)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/routing.py", line 603, in __init__
+    raise ValueError('urls must start with a leading slash')
+ValueError: urls must start with a leading slash
